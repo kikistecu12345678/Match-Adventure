@@ -1,0 +1,28 @@
+PETUALANGAN BUAH - VERSI PERBAIKAN
+
+Cara menjalankan:
+1. Ekstrak file ZIP.
+2. Buka folder game_petualangan_buah di VS Code.
+3. Pastikan folder assets tetap berada satu folder dengan index.html.
+4. Jalankan index.html menggunakan Live Server.
+
+Perbaikan:
+- Menghilangkan tulisan tombol Mulai dan Lanjut yang tampil ganda.
+- Tulisan tombol sekarang dibuat oleh HTML/CSS sehingga ikut berubah saat bahasa diganti.
+- Bentuk tombol dibuat dengan CSS agar tidak menampilkan tulisan bawaan dari gambar PNG.
+- Tata letak halaman permainan dirapikan untuk layar laptop dan HP.
+- Tombol suara, pilihan bahasa, peta level, penilaian, dan perpindahan level tetap tersedia.
+
+Fitur:
+- Halaman utama dengan logo dan maskot.
+- Peta level dengan 3 level.
+- Level 1: menghitung buah.
+- Level 2: penjumlahan buah.
+- Level 3: pengurangan buah.
+- Bahasa Indonesia / English.
+- Efek suara menggunakan Web Audio API (tidak membutuhkan file audio tambahan).
+- Skor bintang dan halaman keberhasilan.
+
+Catatan:
+Jangan memindahkan folder assets. Struktur folder harus tetap seperti di dalam ZIP.
+\nFITUR MUSIK:\n- Musik latar ceria dibuat otomatis oleh JavaScript (tidak perlu file MP3).\n- Musik mulai setelah tombol Mulai, Peta Level, atau tombol level ditekan.\n- Tombol 🔊/🔇 mengatur musik latar sekaligus efek suara.\n\nPEMBARUAN:\n- Game sekarang memiliki 5 level dengan 3 soal per level.\n- Setiap jawaban benar menghasilkan 1 bintang (maksimal 3 bintang per level).\n- Bintang terbaik tiap level tersimpan di browser dan terlihat pada Peta Level.\n

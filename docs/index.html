@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffcf8b">
+    <title>Petualangan Buah</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<main class="app">
+
+    <!-- PENGATURAN -->
+    <header class="toolbar">
+
+        <button class="settings-toggle" id="settingsToggle">
+            ⚙️ <span data-i18n="settings">Pengaturan</span>
+        </button>
+
+        <div class="settings-panel" id="settingsPanel">
+
+            <div class="settings-header">
+                <span data-i18n="settings">Pengaturan</span>
+                <button id="closeSettings">✖</button>
+            </div>
+
+            <div class="settings-item">
+                <div class="settings-icon">🔊</div>
+                <div class="settings-info">
+                    <b data-i18n="sound">Suara</b>
+                    <small data-i18n="soundDesc">Atur suara permainan</small>
+                </div>
+                <button class="setting-action" id="soundBtn">ON</button>
+            </div>
+
+            <div class="settings-item">
+                <div class="settings-icon">🌐</div>
+                <div class="settings-info">
+                    <b data-i18n="language">Bahasa</b>
+                    <small data-i18n="languageDesc">Pilih bahasa permainan</small>
+                </div>
+                <button class="setting-action language-btn" id="languageBtn">
+                    🇬🇧 English
+                </button>
+            </div>
+
+            <div class="settings-item">
+                <div class="settings-icon">🗣️</div>
+                <div class="settings-info">
+                    <b data-i18n="reader">Pembaca Soal</b>
+                    <small data-i18n="readerDesc">Bacakan soal secara otomatis</small>
+                </div>
+                <button class="setting-action" id="readerBtn" type="button">ON</button>
+            </div>
+
+            <div class="settings-footer">
+                🍎 Petualangan Buah 🍊
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- HALAMAN UTAMA -->
+<section class="page active" id="homePage">
+
+    <img
+        src="assets/01_logo_petualangan_buah.png"
+        class="home-logo"
+        alt="Petualangan Buah"
+    >
+
+    <div class="home-actions">
+
+        <button class="image-button start-button" id="startBtn">
+            <span data-i18n="start">Mulai</span>
+        </button>
+
+        <button class="text-button" id="mapBtn" data-i18n="map">
+            Peta Level
+        </button>
+
+    </div>
+
+</section>
+
+    <!-- PETA LEVEL -->
+    <section class="page" id="mapPage">
+
+        <div class="section-heading">
+            <button class="back-icon" data-go="homePage">⬅</button>
+            <h1 data-i18n="map">Peta Level</h1>
+        </div>
+
+        <div class="restart-container">
+            <button class="restart-level-btn" id="restartLevelBtn">
+                🔄 Restart Level
+            </button>
+        </div>
+
+        <div class="map-card">
+
+            <!-- LEVEL 1 -->
+            <div class="map-location">
+                <span class="map-number">1</span>
+                <div class="map-info">
+                    <b data-i18n="forest">Hutan Buah</b>
+                    <small data-i18n="level1">Level 1 • Menghitung</small>
+                </div>
+                <span class="map-stars" id="mapStars0">☆☆☆</span>
+                <button class="level-play" data-level="0">▶</button>
+            </div>
+
+            <!-- LEVEL 2 -->
+            <div class="map-location">
+                <span class="map-number">2</span>
+                <div class="map-info">
+                    <b data-i18n="orangeGarden">Kebun Jeruk</b>
+                    <small data-i18n="level2">Level 2 • Penjumlahan</small>
+                </div>
+                <span class="map-stars" id="mapStars1">☆☆☆</span>
+                <button class="level-play" data-level="1">🔒</button>
+            </div>
+
+            <!-- LEVEL 3 -->
+            <div class="map-location">
+                <span class="map-number">3</span>
+                <div class="map-info">
+                    <b data-i18n="bananaIsland">Pulau Pisang</b>
+                    <small data-i18n="level3">Level 3 • Pengurangan</small>
+                </div>
+                <span class="map-stars" id="mapStars2">☆☆☆</span>
+                <button class="level-play" data-level="2">🔒</button>
+            </div>
+
+            <!-- LEVEL 4 -->
+            <div class="map-location">
+                <span class="map-number">4</span>
+                <div class="map-info">
+                    <b data-i18n="grapeGarden">Kebun Anggur</b>
+                    <small data-i18n="level4">Level 4 • Perkalian</small>
+                </div>
+                <span class="map-stars" id="mapStars3">☆☆☆</span>
+                <button class="level-play" data-level="3">🔒</button>
+            </div>
+
+            <!-- LEVEL 5 -->
+            <div class="map-location">
+                <span class="map-number">5</span>
+                <div class="map-info">
+                    <b data-i18n="fruitFestival">Pesta Buah</b>
+                    <small data-i18n="level5">Level 5 • Tantangan Campuran</small>
+                </div>
+                <span class="map-stars" id="mapStars4">☆☆☆</span>
+                <button class="level-play" data-level="4">🔒</button>
+            </div>
+
+            <!-- LEVEL 6 -->
+            <div class="map-location">
+                <span class="map-number">6</span>
+                <div class="map-info">
+                    <b data-i18n="level6Name">Hutan Apel</b>
+                    <small data-i18n="level6">Level 6 • Perkalian Lanjutan</small>
+                </div>
+                <span class="map-stars" id="mapStars5">☆☆☆</span>
+                <button class="level-play" data-level="5">🔒</button>
+            </div>
+
+            <!-- LEVEL 7 -->
+            <div class="map-location">
+                <span class="map-number">7</span>
+                <div class="map-info">
+                    <b data-i18n="level7Name">Lembah Jeruk</b>
+                    <small data-i18n="level7">Level 7 • Penjumlahan dan Pengurangan</small>
+                </div>
+                <span class="map-stars" id="mapStars6">☆☆☆</span>
+                <button class="level-play" data-level="6">🔒</button>
+            </div>
+
+            <!-- LEVEL 8 -->
+            <div class="map-location">
+                <span class="map-number">8</span>
+                <div class="map-info">
+                    <b data-i18n="level8Name">Pulau Anggur</b>
+                    <small data-i18n="level8">Level 8 • Perkalian</small>
+                </div>
+                <span class="map-stars" id="mapStars7">☆☆☆</span>
+                <button class="level-play" data-level="7">🔒</button>
+            </div>
+
+            <!-- LEVEL 9 -->
+            <div class="map-location">
+                <span class="map-number">9</span>
+                <div class="map-info">
+                    <b data-i18n="level9Name">Kebun Stroberi</b>
+                    <small data-i18n="level9">Level 9 • Tantangan Campuran</small>
+                </div>
+                <span class="map-stars" id="mapStars8">☆☆☆</span>
+                <button class="level-play" data-level="8">🔒</button>
+            </div>
+
+            <!-- LEVEL 10 -->
+            <div class="map-location">
+                <span class="map-number">10</span>
+                <div class="map-info">
+                    <b data-i18n="level10Name">Kerajaan Buah</b>
+                    <small data-i18n="level10">Level 10 • Tantangan Final</small>
+                </div>
+                <span class="map-stars" id="mapStars9">☆☆☆</span>
+                <button class="level-play" data-level="9">🔒</button>
+            </div>
+
+            <!-- LEVEL 11 -->
+<div class="map-location">
+    <span class="map-number">11</span>
+    <div class="map-info">
+        <b data-i18n="level11Name">Lembah Semangka</b>
+        <small data-i18n="level11Desc">Level 11 • Pembagian Lanjutan</small>
+    </div>
+    <span class="map-stars" id="mapStars10">☆☆☆</span>
+    <button class="level-play" data-level="10">🔒</button>
+</div>
+
+<!-- LEVEL 12 -->
+<div class="map-location">
+    <span class="map-number">12</span>
+    <div class="map-info">
+        <b data-i18n="level12Name">Kebun Nanas</b>
+        <small data-i18n="level12Desc">Level 12 • Operasi Campuran</small>
+    </div>
+    <span class="map-stars" id="mapStars11">☆☆☆</span>
+    <button class="level-play" data-level="11">🔒</button>
+</div>
+
+<!-- LEVEL 13 -->
+<div class="map-location">
+    <span class="map-number">13</span>
+    <div class="map-info">
+        <b data-i18n="level13Name">Hutan Melon</b>
+        <small data-i18n="level13Desc">Level 13 • Perkalian dan Pembagian</small>
+    </div>
+    <span class="map-stars" id="mapStars12">☆☆☆</span>
+    <button class="level-play" data-level="12">🔒</button>
+</div>
+
+<!-- LEVEL 14 -->
+<div class="map-location">
+    <span class="map-number">14</span>
+    <div class="map-info">
+        <b data-i18n="level14Name">Pulau Buah Naga</b>
+        <small data-i18n="level14Desc">Level 14 • Operasi Bilangan Besar</small>
+    </div>
+    <span class="map-stars" id="mapStars13">☆☆☆</span>
+    <button class="level-play" data-level="13">🔒</button>
+</div>
+
+<!-- LEVEL 15 -->
+<div class="map-location">
+    <span class="map-number">15</span>
+    <div class="map-info">
+        <b data-i18n="level15Name">Gunung Durian</b>
+        <small data-i18n="level15Desc">Level 15 • Tantangan Sulit</small>
+    </div>
+    <span class="map-stars" id="mapStars14">☆☆☆</span>
+    <button class="level-play" data-level="14">🔒</button>
+</div>
+
+<!-- LEVEL 16 -->
+<div class="map-location">
+    <span class="map-number">16</span>
+    <div class="map-info">
+        <b data-i18n="level16Name">Hutan Alpukat</b>
+        <small data-i18n="level16Desc">Level 16 • Operasi dengan Kurung</small>
+    </div>
+    <span class="map-stars" id="mapStars15">☆☆☆</span>
+    <button class="level-play" data-level="15">🔒</button>
+</div>
+
+<!-- LEVEL 17 -->
+<div class="map-location">
+    <span class="map-number">17</span>
+    <div class="map-info">
+        <b data-i18n="level17Name">Istana Buah</b>
+        <small data-i18n="level17Desc">Level 17 • Hitungan Bertingkat</small>
+    </div>
+    <span class="map-stars" id="mapStars16">☆☆☆</span>
+    <button class="level-play" data-level="16">🔒</button>
+</div>
+
+<!-- LEVEL 18 -->
+<div class="map-location">
+    <span class="map-number">18</span>
+    <div class="map-info">
+        <b data-i18n="level18Name">Gunung Apel Emas</b>
+        <small data-i18n="level18Desc">Level 18 • Tantangan Ahli</small>
+    </div>
+    <span class="map-stars" id="mapStars17">☆☆☆</span>
+    <button class="level-play" data-level="17">🔒</button>
+</div>
+
+<!-- LEVEL 19 -->
+<div class="map-location">
+    <span class="map-number">19</span>
+    <div class="map-info">
+        <b data-i18n="level19Name">Negeri Jeruk</b>
+        <small data-i18n="level19Desc">Level 19 • Tantangan Master</small>
+    </div>
+    <span class="map-stars" id="mapStars18">☆☆☆</span>
+    <button class="level-play" data-level="18">🔒</button>
+</div>
+
+<!-- LEVEL 20 -->
+<div class="map-location">
+    <span class="map-number">20</span>
+    <div class="map-info">
+        <b data-i18n="level20Name">Raja Buah</b>
+        <small data-i18n="level20Desc">Level 20 • Tantangan Final</small>
+    </div>
+    <span class="map-stars" id="mapStars19">☆☆☆</span>
+    <button class="level-play" data-level="19">🔒</button>
+</div>
+
+        <img class="map-mascot"
+             src="assets/08_maskot_serigala_jempol.png"
+             alt="Maskot">
+
+    </section>
+
+
+    <!-- HALAMAN PERMAINAN -->
+    <section class="page" id="gamePage">
+
+        <div class="game-top">
+
+            <button class="back-icon" id="gameBack">⬅</button>
+
+            <div class="level-label">
+                <span data-i18n="level">Level</span>
+                <b id="levelNumber">1</b>
+            </div>
+
+            <div class="stars" id="stars">☆ ☆ ☆</div>
+
+        </div>
+
+        <div class="question-board">
+
+            <div class="wood-title" id="questionTitle">
+                Hitung jumlah buah!
+            </div>
+
+            <div class="question-text" id="questionText">
+                Pilih jawaban yang benar.
+            </div>
+
+            <div class="visual-equation" id="visualEquation"></div>
+
+            <div class="answer-area">
+
+                <p class="answer-instruction" data-i18n="choose">
+                    Pilih jawaban yang benar!
+                </p>
+
+                <div class="answer-list" id="answerList"></div>
+
+            </div>
+
+            <div class="feedback" id="feedback" aria-live="polite"></div>
+
+        </div>
+
+        <div class="game-bottom">
+
+            <img class="game-mascot"
+                 id="gameMascot"
+                 src="assets/06_maskot_serigala_bingung.png"
+                 alt="Maskot">
+
+            <div class="game-controls">
+
+                <div class="progress-text">
+                    <span data-i18n="score">Bintang</span>:
+                    <b id="score">0</b> ⭐
+                </div>
+
+                <button class="hint-button" id="hintBtn">
+                    💡 <span id="hintText">Bantuan</span>
+                    <b id="hintCount">3</b>
+                </button>
+
+                <button class="image-button next-button" id="nextBtn">
+                    <span data-i18n="next">Lanjut</span>
+                </button>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- HALAMAN BERHASIL -->
+    <section class="page" id="successPage">
+
+        <img class="success-mascot"
+             src="assets/07_maskot_serigala_melompat.png"
+             alt="Maskot senang">
+
+        <div class="success-card">
+
+            <h1 data-i18n="great">Hebat!</h1>
+
+            <h2 id="successMessage" data-i18n="completed">
+                Kamu berhasil menyelesaikan level ini!
+            </h2>
+
+            <div class="reward" id="reward">⭐ 3/3</div>
+
+            <button class="image-button" id="continueBtn">
+                <span data-i18n="continue">Lanjut</span>
+            </button>
+
+            <button class="text-button" id="successMapBtn" data-i18n="map">
+                Peta Level
+            </button>
+
+        </div>
+    </section>
+
+</main>
+
+<!-- MUSIK LATAR -->
+<audio id="backgroundMusic" loop>
+    <source src="assets/chalantlyrica_mp3.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
